@@ -10,6 +10,9 @@
         }
     },
     "extract_dir": "jigdo-win-0.8.1/jigdo-bin",
+    "pre_install": [
+        "if (!(Test-Path -Path \"$persist_dir\\jigdo-lite-settings.txt\")) { New-Item \"$dir\\jigdo-lite-settings.txt\" | Out-Null }"
+    ],
      "bin": [
         "jigdo-lite",
         "jigdo-file.exe",
@@ -24,5 +27,8 @@
         "sh.exe",
         "wc.exe",
         "wget.exe"
+    ],
+    "persist": [
+        "jigdo-lite-settings.txt"
     ]
 }
