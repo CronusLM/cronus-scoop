@@ -8,7 +8,7 @@
     "extract_dir": "Umi-OCR 多国语言整合版",
     "bin":[
     "Umi-OCR 文字识别.exe",
-    "umiocr.exe"
+    "extra\\umiocr.exe"
     ] ,
     "shortcuts": [
     "Umi-OCR 文字识别.exe",
