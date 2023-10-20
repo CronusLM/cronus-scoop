@@ -8,11 +8,11 @@
     "extract_dir": "Umi-OCR 多国语言整合版",
     "bin":[
     "Umi-OCR 文字识别.exe",
-    "$app\\extra\\umiocr.exe"
+    "umiocr.exe"
     ] ,
     "shortcuts": [
-            "Umi-OCR 文字识别.exe",
-            "Umi-OCR"
+    "Umi-OCR 文字识别.exe",
+    "Umi-OCR"
     ],
     "persist": "Umi-OCR_config.json",
     "checkver": {
