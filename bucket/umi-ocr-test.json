@@ -7,9 +7,12 @@
     "hash": "5fcfbffce0148ff09ce58eea15a52c4d49c99903c7b5afd712f45862ba4026e1",
     "extract_dir": "Umi-OCR 多国语言整合版",
     "shortcuts": [
-    "Umi-OCR 文字识别.exe",
-    "Umi-OCR"
+       [
+            "Umi-OCR 文字识别.exe",
+            "Umi-OCR"
+        ]
     ],
+    "persist": "Umi-OCR_config.json",
     "checkver": {
         "url": "https://github.com/hiroi-sora/Umi-OCR/releases/latest",
         "regex": "/releases/tag/v([\\d.]+)"
