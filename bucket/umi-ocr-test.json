@@ -9,7 +9,7 @@
     "bin": [
         [
             "Umi-OCR 文字识别.exe",
-            "extra\\umiocr.exe"
+            "$app\\extra\\umiocr.exe"
         ]
     ],
     "shortcuts": [
