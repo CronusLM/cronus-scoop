@@ -12,8 +12,10 @@
     "extract_dir": "Umi-OCR_Rapid_v2.0.0",
     "bin": "Umi-OCR.exe",
     "shortcuts": [
+    [
             "Umi-OCR.exe",
             "Umi-OCR"
+    ]
     ],
     "persist": "Umi-OCR_config.json",
     "checkver": "github",
