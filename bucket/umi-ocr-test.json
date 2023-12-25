@@ -10,10 +10,7 @@
         "de850eb92c23306f57ad07eb9a35e5d11cba966de4f97d680c5f7e84febce921"
     ],
     "extract_dir": "Umi-OCR_Rapid_v2.0.0",
-    "pre_install": [
-    "if (!(Test-Path \"$persist_dir\\UmiOCR-data\\.pre_settings\")) { New-Item \"$dir\\UmiOCR-data\\.pre_settings\" -ItemType File | Out-Null }",
-    "if (!(Test-Path \"$persist_dir\\UmiOCR-data\\.settings\")) { New-Item \"$dir\\UmiOCR-data\\.settings\" -ItemType File | Out-Null }"
-    ],
+    "pre_install": "if (!(Test-Path \"$persist_dir\\UmiOCR-data\\.pre_settings\")) { New-Item \"$dir\\UmiOCR-data\\.pre_settings\" -ItemType File | Out-Null }",
     "bin": "Umi-OCR.exe",
     "shortcuts": [
     [
@@ -21,10 +18,7 @@
             "Umi-OCR"
     ]
     ],
-    "persist": [
-    "UmiOCR-data\\.pre_settings",
-    "UmiOCR-data\\.settings"
-    ],
+    "persist": "UmiOCR-data\\.pre_settings",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/hiroi-sora/Umi-OCR/releases/download/release%2Fv$version/Umi-OCR_Rapid_v$version.7z.exe"
