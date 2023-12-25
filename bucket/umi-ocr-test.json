@@ -12,7 +12,7 @@
     "extract_dir": "Umi-OCR_Rapid_v2.0.0",
     "pre_install": [
     "if (!(Test-Path \"$persist_dir\\UmiOCR-data\\.pre_settings\")) { New-Item \"$dir\\UmiOCR-data\\.pre_settings\" -ItemType File | Out-Null }",
-    "if (!(Test-Path \"$persist_dir\\UmiOCR-data\\.settings\")) { New-Item \"$dir\\UmiOCR-data\\.settings\" -ItemType File | Out-Null }",
+    "if (!(Test-Path \"$persist_dir\\UmiOCR-data\\.settings\")) { New-Item \"$dir\\UmiOCR-data\\.settings\" -ItemType File | Out-Null }"
     ],
     "bin": "Umi-OCR.exe",
     "shortcuts": [
