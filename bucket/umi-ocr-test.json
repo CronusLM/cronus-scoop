@@ -22,8 +22,8 @@
     ]
     ],
     "persist": [
-    "UmiOCR-data\.pre_settings",
-    "UmiOCR-data\.settings"
+    "UmiOCR-data\\.pre_settings",
+    "UmiOCR-data\\.settings"
     ],
     "checkver": "github",
     "autoupdate": {
