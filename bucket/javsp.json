@@ -1,0 +1,39 @@
+{
+    "version": "1.5.7",
+    "description": "提取影片文件名中的番号信息，自动抓取并汇总多个站点数据的 AV 元数据，按照指定的规则分类整理影片文件，并创建供 Emby、Jellyfin、Kodi 等软件使用的元数据文件",
+    "homepage": "https://github.com/Yuukiy/JavSP",
+    "license": "GPLv3",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Yuukiy/JavSP/releases/download/v1.7.3/JavSP-v1.7.3-Windows-amd64.zip",
+            "hash": "fb133b943cb7bcf29291443081074bdab76d337f31e2bef2bfa1725c1b2c2484"
+        }
+    },
+    "pre_install": [
+    "if (!(Test-Path \"$persist_dir\\config.ini\")) { New-Item \"$dir\\config.ini\" -ItemType File | Out-Null }",
+    "if (!(Test-Path \"$persist_dir\\FileMove.log\")) { New-Item \"$dir\\FileMove.log\" -ItemType File | Out-Null }",
+    "if (!(Test-Path \"$persist_dir\\JavSP.log\")) { New-Item \"$dir\\JavSP.log\" -ItemType File | Out-Null }"
+    ],
+    "shortcuts": [
+        [
+            "JavSP.exe",
+            "JavSP"
+        ]
+    ],
+    "bin": "JavSP.exe",
+    "persist": [
+    "config.ini",
+    "FileMove.log",
+    "JavSP.log"
+    ],
+    "checkver": {
+        "github": "https://github.com/leiurayer/downkyi"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/leiurayer/downkyi/releases/download/v$version/DownKyi-$version.zip"
+            }
+        }
+    }
+}
