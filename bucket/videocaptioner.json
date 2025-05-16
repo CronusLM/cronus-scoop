@@ -14,6 +14,10 @@
         }
     },
     "innosetup": true,
+    "pre_install": [
+        "if (!(Test-Path -Path \"$persist_dir\\AppData\")) { New-Item -Path \"$dir\\AppData\" -ItemType directory | Out-Null }"
+    ],
+    "persist": "AppData",
     "bin": "VideoCaptioner.exe",
     "shortcuts": [
         [
@@ -21,9 +25,7 @@
             "VideoCaptioner"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/WEIFENG2333/VideoCaptioner"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
