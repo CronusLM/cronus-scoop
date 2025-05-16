@@ -20,8 +20,7 @@
     },
     "autoupdate": {
         "architecture": {
-            "url": "https://github.com/binbyu/Reader/releases/download/v$version/Reader_v$version_x64.7z"
-            https://github.com/WEIFENG2333/VideoCaptioner/releases/download/v$version/VideoCaptioner-Setup-win64-v$version.exe
+            "url": "https://github.com/WEIFENG2333/VideoCaptioner/releases/download/v$version/VideoCaptioner-Setup-win64-v$version.exe"
         }
     }
 }
