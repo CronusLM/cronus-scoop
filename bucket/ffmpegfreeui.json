@@ -13,7 +13,10 @@
             "hash": "aa48d5a631f2a1563a21cae07f8db6fa7754478f37f3d4eb9eb54abb263a87c2"
         }
     },
-    "shortcuts":{FFmpegFreeUI ReadyToRun x64},
+    "extract_dir": {
+        "64bit": "FFmpegFreeUI ReadyToRun x64",
+        "32bit": "FFmpegFreeUI ReadyToRun x86"
+    },
     "shortcuts": [
         [
             "FFmpegFreeUI.exe",
@@ -23,7 +26,8 @@
     "bin": "FFmpegFreeUI.exe",
     "persist": "Settings.json",
     "checkver": {
-        "github": "https://github.com/Lake1059/FFmpegFreeUI"
+        "github": "https://github.com/Lake1059/FFmpegFreeUI",
+        "regex": "/releases/tag/([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
