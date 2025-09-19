@@ -1,0 +1,37 @@
+{
+    "version": "2.6",
+    "description": "FFmpegFreeUI",
+    "homepage": "https://github.com/Lake1059/FFmpegFreeUI/blob/main/README.md",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Lake1059/FFmpegFreeUI/releases/download/2.6/FFmpegFreeUI.ReadyToRun.x64.7z",
+            "hash": "61611d3bf7622b876a35403a32302bdd16dd439b35ae78480501ecafca07fb06"
+        },
+        "32bit": {
+            "url": "https://github.com/Lake1059/FFmpegFreeUI/releases/download/2.6/FFmpegFreeUI.ReadyToRun.x86.7z",
+            "hash": "aa48d5a631f2a1563a21cae07f8db6fa7754478f37f3d4eb9eb54abb263a87c2"
+        }
+    },
+    "shortcuts": [
+        [
+            "FFmpegFreeUI.exe",
+            "FFmpegFreeUI"
+        ]
+    ],
+    "bin": "FFmpegFreeUI.exe",
+    "persist": "Settings.json",
+    "checkver": {
+        "github": "https://github.com/Lake1059/FFmpegFreeUI"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Lake1059/FFmpegFreeUI/releases/download/$version/FFmpegFreeUI.ReadyToRun.x64.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/Lake1059/FFmpegFreeUI/releases/download/$version/FFmpegFreeUI.ReadyToRun.x86.7z"
+            }
+        }
+    }
+}
