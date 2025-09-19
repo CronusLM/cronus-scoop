@@ -14,8 +14,10 @@
         }
     },
     "extract_dir": {
-        "64bit": "FFmpegFreeUI ReadyToRun x64",
-        "32bit": "FFmpegFreeUI ReadyToRun x86"
+        "architecture": {
+            "64bit": "FFmpegFreeUI ReadyToRun x64",
+            "32bit": "FFmpegFreeUI ReadyToRun x86"
+        }
     },
     "shortcuts": [
         [
