@@ -1,3 +1,12 @@
+> **⚠️ Repository status notice**
+>
+> This repository has **removed upstream-supported projects** (no longer tracks `Scoopforge/Extras-CN`)
+> and has been **converted into a personal test repository**.
+> It is used only for personal experiments and Scoop manifest tinkering; it is not kept in sync with
+> upstream and should **not** be used as a production bucket.
+
+---
+
 # 🍨 Scoopet 🍨
 
 [![Excavator](https://github.com/ivaquero/scoopet/actions/workflows/schedule.yml/badge.svg)](https://github.com/ivaquero/scoopet/actions/workflows/schedule.yml)

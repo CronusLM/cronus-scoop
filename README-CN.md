@@ -1,3 +1,10 @@
+> **⚠️ 仓库状态变更通知**
+>
+> 本仓库已**移除上游支持项目**（不再跟踪 `Scoopforge/Extras-CN`），现**转换为个人测试仓库**。
+> 仅用于个人试验与整理 Scoop 清单，不保证与上游同步，请勿作为正式 bucket 使用。
+
+---
+
 # 🍨 Scoopet 🍨
 
 [![Excavator](https://github.com/ivaquero/scoopet/actions/workflows/schedule.yml/badge.svg)](https://github.com/ivaquero/scoopet/actions/workflows/schedule.yml)
