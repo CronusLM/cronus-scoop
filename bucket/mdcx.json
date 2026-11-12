@@ -1,0 +1,37 @@
+{
+    "version": "22026072703",
+    "description": "MDCx-New (LoongYu/mdcx-new) 是一个持续维护中的图形化影视元数据刮削与整理工具：支持多站点元数据获取、封面图片下载、NFO 生成、演员信息维护，以及刮削完成后的文件与目录重命名整理。",
+    "homepage": "https://github.com/LoongYu/mdcx-new",
+    "license": "GPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/LoongYu/mdcx-new/releases/download/22026072703/MDCx-22026072703-windows-x86_64.exe",
+            "hash": "24fb1676a0becd3d62a8f1fd2c7b7f5434191633667492586f46bba2b823b0b4"
+        }
+    },
+    "pre_install": [
+        "Move-Item -Path \"$dir\\MDCx-$version-windows-x86_64.exe\" -Destination \"$dir\\MDCx.exe\" -Force"
+    ],
+    "bin": [
+        [
+            "MDCx.exe",
+            "mdcx"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "MDCx.exe",
+            "MDCx"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/LoongYu/mdcx-new"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/LoongYu/mdcx-new/releases/download/$version/MDCx-$version-windows-x86_64.exe"
+            }
+        }
+    }
+}
