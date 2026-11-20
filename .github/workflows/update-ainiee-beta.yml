@@ -1,0 +1,59 @@
+name: Update AiNiee Beta Hash
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # 每天 UTC 06:00 (北京时间 14:00)
+  workflow_dispatch:      # 支持手动触发
+
+permissions:
+  contents: write         # 需要写权限以便提交
+
+jobs:
+  update-hash:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Download Beta zip and compute SHA256
+        id: hash
+        run: |
+          url="https://github.com/NEKOparapa/AiNiee/releases/download/Beta/AiNiee-Beta-Windows-Portable.zip"
+          echo "Downloading from $url..."
+          curl -sL -o /tmp/ainiee-beta.zip "$url"
+          hash=$(sha256sum /tmp/ainiee-beta.zip | cut -d' ' -f1)
+          echo "hash=$hash" >> $GITHUB_OUTPUT
+          rm /tmp/ainiee-beta.zip
+          echo "Computed hash: $hash"
+
+      - name: Update manifest hash
+        run: |
+          manifest="bucket/ainiee-beta.json"
+          # 使用 jq 更新 hash 字段
+          jq --arg h "${{ steps.hash.outputs.hash }}" '.architecture."64bit".hash = $h' "$manifest" > "$manifest.tmp"
+          mv "$manifest.tmp" "$manifest"
+          echo "Updated $manifest"
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet bucket/ainiee-beta.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No changes in manifest"
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Manifest has changes"
+            git diff bucket/ainiee-beta.json
+          fi
+
+      - name: Commit and push changes
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add bucket/ainiee-beta.json
+          git commit -m "chore: update ainiee-beta hash to ${{ steps.hash.outputs.hash }}"
+          git push
